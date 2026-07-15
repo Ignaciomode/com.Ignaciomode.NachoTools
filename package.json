@@ -1,0 +1,11 @@
+{
+  "name": "com.ignaciomode.nachotools",
+  "version": "1.0.0",
+  "displayName": "Nacho's tools",
+  "description": "A private package for shared team utilities.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Ignacio Manuel Castro",
+    "email": "nachocastro62@gmail.com"
+  }
+}
