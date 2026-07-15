@@ -1,0 +1,18 @@
+{
+    "name": "NachoTools.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:39a39d7d45c81164086c3efdcdf780b8"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
