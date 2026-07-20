@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class VolumeManager : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _mixer;
+    [SerializeField] private AudioMixerVariable mixerVariable;
     [SerializeField] private Slider _musicSlider, _sfxSlider, _masterSlider;
+
+    private AudioMixer _mixer;
 
     private void Start()
     {
-        _mixer = AudioManager.instance.mixer;
+        _mixer = mixerVariable ? mixerVariable.value : null;
         if(_mixer)
             SetSavedValues();
     }

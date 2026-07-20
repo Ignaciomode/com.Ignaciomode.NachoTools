@@ -12,12 +12,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup _mixerGroupMusic;
     [SerializeField] private AudioMixerGroup _mixerGroupSFX;
 
-    public static AudioManager instance;
     public AudioMixer mixer;
+    [SerializeField] private AudioMixerVariable mixerVariable;
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (mixerVariable) mixerVariable.value = mixer;
         DontDestroyOnLoad(this.gameObject);
     }
 
