@@ -13,7 +13,7 @@
 /// Registration itself is order-safe: SaveManager.Register imports immediately when the
 /// load has already completed, so binding late is not the same as missing the data.
 /// </summary>
-public sealed class SaveParticipantBinding<TSave>
+public sealed class SaveParticipantBinding<TSave> where TSave : class, ISaveVersioned, new()
 {
     private ISaveParticipant<TSave> _participant;
     private SaveManager<TSave> _bound;

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NaughtyAttributes;
 using UnityEngine;
 
 /// <summary>
@@ -22,7 +21,7 @@ public abstract class SaveManager<TSave> : MonoBehaviour where TSave : class, IS
     [SerializeField] private string dataFile = "data";
 
     [SerializeField]
-    [Required("Awake() assigns this manager into the variable so participants in other prefabs can register.")]
+    [Tooltip("Awake() assigns this manager into the variable so participants in other prefabs can register.")]
     private ScriptableVariable<SaveManager<TSave>> reference;
 
     /// <summary>
@@ -151,7 +150,6 @@ public abstract class SaveManager<TSave> : MonoBehaviour where TSave : class, IS
 
     #region Saving
 
-    [Button("Save Game")]
     [ContextMenu("SaveGame")]
     private void SaveGameButton() => _ = RequestSave();
 
@@ -232,7 +230,6 @@ public abstract class SaveManager<TSave> : MonoBehaviour where TSave : class, IS
 
     #region Loading
 
-    [Button("Load Game")]
     [ContextMenu("LoadGame")]
     private void LoadGameButton() => _ = LoadGameAsync();
 
@@ -325,7 +322,6 @@ public abstract class SaveManager<TSave> : MonoBehaviour where TSave : class, IS
 
     #region Reset
 
-    [Button("Delete Save and Reset")]
     [ContextMenu("DeleteSaveAndReset")]
     private void DeleteSaveAndResetButton() => _ = DeleteSaveAndResetAsync();
 
